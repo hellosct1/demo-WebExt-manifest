@@ -1,0 +1,39 @@
+{
+   "manifest_version": 2,
+    "name": "DEMO WebExtension Manifest",
+    "version": "1.5",
+    "description": "Demo WebExtension Manifest for the WebExtensions of the browser",
+    "icons": {
+        "48":  "icons/icon-48.png",
+        "32":  "icons/icon-32.png",
+        "96":  "icons/icon-96.png",
+        "16":  "icons/icon-16.png"
+    },
+    
+    "browser_action": {
+        "default_title": "DEMO WebExtension Manifest",
+        "default_icon":  "icons/icon-128.png",
+        "default_popup": "browser_action/popup.html"
+    },
+    
+
+    "content_scripts": [
+      {
+        "matches": ["*://www.mozilla.org/*","*://localhost/*"],
+        "js": ["background/mozilla.js"]
+      }, 
+      {
+        "matches": ["<all_urls>"],
+        "exclude_matches": ["*://www.mozilla.org/*"],
+        "js": ["background/all-sites.js"]
+      }
+    ],
+    "web_accessible_resources": [
+        "resources/*"
+    ],
+    "permissions": [
+        "<all_urls>",
+        "notifications",
+        "tabs"
+    ]
+}
