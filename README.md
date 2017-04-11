@@ -4,9 +4,9 @@ Demo WebExtension Manifest for the WebExtensions of the browser
 
 
 ## Information
-La démo a été présentée aux Journées du Logiciel Libre (JDLL) à Lyon (France) - 2 avril 2017
+The demo was presented at the Free Software Days (JDLL) in Lyon (France) - April 2, 2017
 
-La demo a été testée sur :
+The demo was tested on:
 
 - Firefox Nightly 55
 - Chrome 57
@@ -17,54 +17,56 @@ La demo a été testée sur :
 
 ## Fonctionnality WebExtension
 
-De nombreuses fonctionnalités sont présentes pour construire son #manifest.json#
-Différentes fonctions Javascript utilisent le DOM pour commmuniquer
+Many features are present to build its #manifest.json#
+Different Javascript functions use the DOM to communicate
+
 
 ### browser_action
 
-Il se position dans la barre des actions et affiche différents bouton : 
+It is positioned in the action bar and displays different button: 
 
 - Journées du Logiciel Libre (JDLL) : http://www.jdll.org
-- Le site francophone de la communauté Française : http://www.mozfr.org
-- Le site officiel des elePHPants : http://www.elephpant.com
-- La fondatio Mozilla : https://www.mozilla.org
-- Un bouton RESET
+- The Francophone site of the French community : http://www.mozfr.org
+- The official elePHPants website : http://www.elephpant.com
+- The fondation Mozilla : https://www.mozilla.org
+- A RESET button
 
 
-La première fonctionnalité : 
+First realization: 
 
-- Un menu propose différents boutons à cliquer.
-- Chaque clic ajoutera un cadre d'une couleur Différente
-- Un bouton RESET permet de revenir à l'origine
+- A menu offers several buttons to click.
+- More info add a frame of a different color
+- A RESET button is used to return to the origin
 
-La deuxième fonctionnalité : 
 
-- Affiche un popup en bas de l'écran avec différentes informations, logo
-- Chaque fenêtre permet d'ouvrir un nouvel onglet vers le site internet choisi
+The second effort:
+
+- Post a popup at the bottom of the screen with different information, logo
+- Each window allows to open a new tab to the chosen site
 
 
 ### content_scripts
 
-La zone de content scripts permet de modifier l'intérieur de la fenêtre
+The content scripting area allows you to change the inside of the window
 
-- Quelque soit le bouton, une bordure sera affichée pour réduire la zone d'affichage
-- Pour le bouton "Mozilla", un message sera affiché en bas du site internet dans une balise DIV
-
+- Regardless of the button, a border will be displayed to reduce the display area
+- For the "Mozilla" button, a SERA message is displayed at the bottom of the website in a DIV tag
 
 ### background
 
-Les actions et animations sont activés par les appels en arrière plan
-Elles sont déclarées dans le fichier manifest.json
+Actions and animations are activated by background calls
+They are declared in the file manifest.json
+
 
 ### Resources
 
-Les ressources embarquent différentes images dans l'extension pour éviter de les charger à chaque fois.
-Ces images sont affichées dans le popup du bouton choisi
+The resources embed different images in the extension to avoid the chargers each time.
+These images are displayed in the popup of choice of choice
 
 
 ### permission
 
-Différentes permissions ont été ajoutés pour permettre à l'extension de fonctionné
+Different permissions have been added to allow the extension to work
 
 
 ## Crédit
